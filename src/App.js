@@ -7,7 +7,6 @@ console.log('api key', API_KEY);
 class App extends React.Component {
   //constructor function 
   constructor(props){
-    //add state
     super(props);
     this.state ={
       starWarsChars: [],
