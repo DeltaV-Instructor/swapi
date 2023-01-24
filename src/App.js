@@ -17,10 +17,7 @@ class App extends React.Component {
   //add helper functions 
   handleSubmit = async (event) =>  {
     event.preventDefault();
-    // // // // // // console.log("🚀 ~ file: App.js:17 ~ App ~ event", event);
     let starWarsCharacters = await axios.get("https://swapi.dev/api/people/?page=1");
-    // // // // // // console.log("🚀 ~ file: App.js:24 ~ App ~ handleSubmit= ~ starWarsCharacters", starWarsCharacters);
-    // console.log('GGGGGGG', starWarsCharacters.data.results);
     this.setState({
       starWarsChars: starWarsCharacters.data.results,
     });
@@ -29,7 +26,6 @@ class App extends React.Component {
 
 
   render() {
-    // console.log('!!!!!!!',this.state.starWarsChars);
     let starWarsList = this.state.starWarsChars.map((charName, index) => {
       return <li key={index}>{charName.name}</li>;
     });
